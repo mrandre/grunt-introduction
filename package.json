@@ -1,0 +1,19 @@
+{
+  "name": "grunt-intro",
+  "version": "0.0.1",
+  "description": "A walkthrough intro to grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mrandre/grunt-intro.git"
+  },
+  "author": "Andre Behrens",
+  "license": "apache2",
+  "bugs": {
+    "url": "https://github.com/mrandre/grunt-intro/issues"
+  },
+  "homepage": "https://github.com/mrandre/grunt-intro"
+}

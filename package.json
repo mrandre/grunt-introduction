@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mrandre/grunt-intro/issues"
   },
-  "homepage": "https://github.com/mrandre/grunt-intro"
+  "homepage": "https://github.com/mrandre/grunt-intro",
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  }
 }

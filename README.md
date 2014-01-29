@@ -1,5 +1,5 @@
-An Introduction to Git
-======================
+An Introduction to Grunt
+========================
 
 This is a repository which goes with a presentation on learning Grunt. You can view an outline of the talk by opening outline/index.html in your browser of choice.
 

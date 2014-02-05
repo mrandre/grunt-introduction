@@ -719,7 +719,7 @@
 <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
 <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
 <td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
-<td class=" content level4 subcell">It's pretty cool.<br>
+<td class=" content level4 subcell">This will create a new folder called "node_modules", and place grunt and its dependencies inside that folder.<br>
 </td>
 </tr></table></div></td>
 <td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor4"><div class="full column level4" style=""></div></div></td>
@@ -739,7 +739,7 @@
 <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
 <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
 <td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
-<td class=" content level4 subcell">This will create a new folder called "node_modules", and place grunt and its dependencies inside that folder.<br>
+<td class=" content level4 subcell">It's pretty cool.<br>
 </td>
 </tr></table></div></td>
 <td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor4"><div class="full column level4" style=""></div></div></td>
@@ -761,7 +761,7 @@
 <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
 <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
 <td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
-<td class=" content level4 subcell">After running this, you should be able to run "which grunt" and get a response.<br>
+<td class=" content level4 subcell">This installs the global grunt command. That's what -g means. Since this will install to a major directory, you'll need admin privileges to run the command. Hence the sudo. <br>
 </td>
 </tr></table></div></td>
 <td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor4"><div class="full column level4" style=""></div></div></td>
@@ -771,7 +771,7 @@
 <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
 <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
 <td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
-<td class=" content level4 subcell">This installs the global grunt command. That's what -g means. Since this will install to a major directory, you'll need admin privileges to run the command. Hence the sudo. <br>
+<td class=" content level4 subcell">After running this, you should be able to run "which grunt" and get a response.<br>
 </td>
 </tr></table></div></td>
 <td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor4"><div class="full column level4" style=""></div></div></td>
@@ -1379,6 +1379,16 @@
 </tr></table>
 <div id="pdpF1OXKInYW" class="expanded">
 <table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
+<td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Code" style="background-color:rgb(85,83,78) ;  "><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Code ns-gutter-Code" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Code ns-gutter-Code" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Code ns-gutter-Code" style=' width: 1px; color:rgb(252,245,227) ;  font-family: "Inconsolata", sans-serif;  '></td>
+<td class=" content level3 ns-Code subcell" style='color:rgb(252,245,227) ;  font-family: "Inconsolata", sans-serif;  '>module.exports = function(grunt) {<br>	grunt.initConfig({<br>		pkg: grunt.file.readJSON("package.json"),<br><br>		concat: {<br>			main: {<br>				src: ["src/**/*.js"],<br>				dest: "dist/&lt;%= pkg.name %&gt;-&lt;%= pkg.version %&gt;.js"<br>			}<br>		},<br><br>		uglify: {<br>			main: {<br>				src: ["&lt;%= concat.main.dest %&gt;"],<br>				dest: "dist/&lt;%= pkg.name %&gt;-&lt;%= pkg.version %&gt;.min.js" <br>			}<br>		}<br><br>	});<br><br>	grunt.loadNpmTasks("grunt-contrib-concat");<br>	grunt.loadNpmTasks("grunt-contrib-uglify");<br>};<br>
+</td>
+</tr></table></div></td>
+<td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor3 ns-bg-Code" style="background-color:rgb(85,83,78) ;  "><div class="full column level3 ns-Code" style='color:rgb(252,245,227) ;  font-family: "Inconsolata", sans-serif;  '></div></div></td>
+</tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
 <td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
 <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
 <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pbZpQaQI1Qii', event.shiftKey)" id="ibZpQaQI1Qii" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
@@ -1394,7 +1404,7 @@
 <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
 <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
 <td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
-<td class=" content level4 subcell">This means “Use the config value of concat task, main target, value ‘dest’.” Think about how handy this is. Our changes will cascade downward if we change them. It’s important that we always pick up the right file, and this way, we can be sure we always will. Handy!<br>
+<td class=" content level4 subcell">Our source value is “&lt;%= concat.main.dest =%&gt;”.<br>
 </td>
 </tr></table></div></td>
 <td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor4"><div class="full column level4" style=""></div></div></td>
@@ -1404,22 +1414,12 @@
 <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
 <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
 <td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
-<td class=" content level4 subcell">Our source value is “&lt;%= concat.main.dest =%&gt;”.<br>
+<td class=" content level4 subcell">This means “Use the config value of concat task, main target, value ‘dest’.” Think about how handy this is. Our changes will cascade downward if we change them. It’s important that we always pick up the right file, and this way, we can be sure we always will. Handy!<br>
 </td>
 </tr></table></div></td>
 <td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor4"><div class="full column level4" style=""></div></div></td>
 </tr></table>
 </div>
-<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
-<td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Code" style="background-color:rgb(85,83,78) ;  "><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
-<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Code ns-gutter-Code" style="width: 41px;"></td>
-<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Code ns-gutter-Code" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
-<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Code ns-gutter-Code" style=' width: 1px; color:rgb(252,245,227) ;  font-family: "Inconsolata", sans-serif;  '></td>
-<td class=" content level3 ns-Code subcell" style='color:rgb(252,245,227) ;  font-family: "Inconsolata", sans-serif;  '>module.exports = function(grunt) {<br>	grunt.initConfig({<br>		pkg: grunt.file.readJSON("package.json"),<br><br>		concat: {<br>			main: {<br>				src: ["src/**/*.js"],<br>				dest: "dist/&lt;%= pkg.name %&gt;-&lt;%= pkg.version %&gt;.js"<br>			}<br>		},<br><br>		uglify: {<br>			main: {<br>				src: ["&lt;%= concat.main.dest %&gt;"],<br>				dest: "dist/&lt;%= pkg.name %&gt;-&lt;%= pkg.version %&gt;.min.js" <br>			}<br>		}<br><br>	});<br><br>	grunt.loadNpmTasks("grunt-contrib-concat");<br>	grunt.loadNpmTasks("grunt-contrib-uglify");<br>};<br>
-</td>
-</tr></table></div></td>
-<td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor3 ns-bg-Code" style="background-color:rgb(85,83,78) ;  "><div class="full column level3 ns-Code" style='color:rgb(252,245,227) ;  font-family: "Inconsolata", sans-serif;  '></div></div></td>
-</tr></table>
 </div>
 <table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
 <td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
@@ -1572,6 +1572,16 @@
 <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
 <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
 <td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">Note that I’ve explicitly specified the main target. I’m doing this out of caution. If I don’t explicitly mention a target, grunt will run all targets. Neither way is right or wrong.<br>
+</td>
+</tr></table></div></td>
+<td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor3"><div class="full column level3" style=""></div></div></td>
+</tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
+<td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
 <td class=" content level3 subcell">Now I can run<br>
 </td>
 </tr></table></div></td>
@@ -1586,16 +1596,6 @@
 </td>
 </tr></table></div></td>
 <td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor3 ns-bg-Code" style="background-color:rgb(85,83,78) ;  "><div class="full column level3 ns-Code" style='color:rgb(252,245,227) ;  font-family: "Inconsolata", sans-serif;  '></div></div></td>
-</tr></table>
-<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
-<td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
-<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
-<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
-<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
-<td class=" content level3 subcell">Note that I’ve explicitly specified the main target. I’m doing this out of caution. If I don’t explicitly mention a target, grunt will run all targets. Neither way is right or wrong.<br>
-</td>
-</tr></table></div></td>
-<td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor3"><div class="full column level3" style=""></div></div></td>
 </tr></table>
 </div>
 <table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
@@ -1695,7 +1695,7 @@
 <table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
 <td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
 <td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
-<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pasudM7WAVWx', event.shiftKey)" id="iasudM7WAVWx" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pasudM7WAVWx', event.shiftKey)" id="iasudM7WAVWx" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"></td>
 <td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
 <td class=" content level1 subcell">Watch<br>
 </td>
@@ -1703,7 +1703,7 @@
 <td class=" col2 colbackground2 col_width2" style=""><div class=" full levelcolor1"><div class="full column level1" style="">9-watch-plugin<br>
 </div></div></td>
 </tr></table>
-<div id="pasudM7WAVWx" class="expanded">
+<div id="pasudM7WAVWx" class="collapsed">
 <table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr>
 <td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
 <td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
